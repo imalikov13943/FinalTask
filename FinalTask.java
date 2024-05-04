@@ -7,8 +7,8 @@ public class FinalTask {
         List<Contact> contacts = Arrays.asList(
             new Contact("Денис", "Рабочий1", "+7 (900) 317-18-35"),
             new Contact("Денис", "Домашний", "+7 (958) 555-82-01"),
-            new Contact("Тимофей", "Домашний", "+7 (932) 923-77-66"),
             new Contact("Тимофей", "Рабочий1", "+7 (902) 952-82-63"),
+            new Contact("Тимофей", "Домашний", "+7 (932) 923-77-66"),
             new Contact("Шаров", "Домашний", "+7 (900) 379-59-19"),
             new Contact("Денис", "Рабочий2", "+7 (711) 391-14-33")
         );
@@ -30,10 +30,11 @@ public class FinalTask {
             System.out.println("1. Просмотреть контакт");
             System.out.println("2. Изменить номер телефона");
             System.out.println("3. Добавить новый контакт");
-            System.out.println("4. Выйти");
+            System.out.println("4. Удалить контакт");
+            System.out.println("5. Выйти");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); 
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -52,6 +53,7 @@ public class FinalTask {
                             .forEach(entry -> {
                                 System.out.println("  " + entry.getKey() + ": " + String.join(", ", entry.getValue()));
                             });
+
                     break;
                 case 2:
                     System.out.print("Введите имя человека: ");
@@ -102,6 +104,18 @@ public class FinalTask {
                     System.out.println("Контакт успешно добавлен.");
                     break;
                 case 4:
+                    System.out.print("Введите имя человека: ");
+                    name = scanner.nextLine();
+
+                    if (!phoneBook.containsKey(name)) {
+                        System.out.println("Контакт с именем " + name + " не найден.");
+                        break;
+                    }
+
+                    phoneBook.remove(name);
+                    System.out.println("Контакт " + name + " успешно удален.");
+                    break;
+                case 5:
                     exit = true;
                     break;
                 default:
@@ -123,3 +137,4 @@ public class FinalTask {
         }
     }
 }
+
