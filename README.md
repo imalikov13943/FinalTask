@@ -14,4 +14,4 @@
 
 6. Выход кода
 
-<img width="202" alt="Screenshot 2024-05-04 at 14 13 31" src="https://github.com/imalikov13943/FinalTask/assets/102352450/d2fec580-8a3b-4f46-9ae4-d2119c098384">
+<img width="189" alt="Screenshot 2024-05-04 at 15 33 47" src="https://github.com/imalikov13943/FinalTask/assets/102352450/07ee706d-4ad9-4b68-a18d-a2164ff7faa6">
